@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:EjemploEstilos"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         FontFamily="Verdana" FontSize="22" FontWeight="Bold">
+    <Window.Resources>
+        <FontFamily x:Key="ButtonFontFamily">Times New Roman</FontFamily>
+        <sys:Double x:Key="ButtonFontSize">18</sys:Double>
+        <FontWeight x:Key="ButtonFontWeight">Bold</FontWeight>
+    </Window.Resources>
     <StackPanel>
         <StackPanel Margin="10">
             <TextBlock>Mi texto de pruebas</TextBlock>
@@ -14,7 +20,9 @@
         </StackPanel>
         <StackPanel Margin="10">
             <TextBlock>Mi texto de prueba</TextBlock>
-            <Button>
+            <Button FontFamily="{StaticResource ButtonFontFamily}"
+                    FontWeight="{StaticResource ButtonFontWeight}"
+                    FontSize="{StaticResource ButtonFontSize}">
                 Mi botón
             </Button>
         </StackPanel>
