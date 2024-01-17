@@ -12,6 +12,11 @@
         <FontFamily x:Key="ButtonFontFamily">Times New Roman</FontFamily>
         <sys:Double x:Key="ButtonFontSize">18</sys:Double>
         <FontWeight x:Key="ButtonFontWeight">Bold</FontWeight>
+        <Style x:Key="BigFontButtonStyle">
+            <Setter Property="Control.FontFamily" Value="Times New Roman"/>
+            <Setter Property="Control.FontWeight" Value="Bold"/>
+            <Setter Property="Control.FontSize" Value="30"/>
+        </Style>
     </Window.Resources>
     <StackPanel>
         <StackPanel Margin="10">
@@ -23,6 +28,12 @@
             <Button FontFamily="{StaticResource ButtonFontFamily}"
                     FontWeight="{StaticResource ButtonFontWeight}"
                     FontSize="{StaticResource ButtonFontSize}">
+                Mi botón
+            </Button>
+        </StackPanel>
+        <StackPanel Margin="10">
+            <TextBlock>Mi texto de prueba grande</TextBlock>
+            <Button Style="{StaticResource BigFontButtonStyle}" FontSize="50">
                 Mi botón
             </Button>
         </StackPanel>
