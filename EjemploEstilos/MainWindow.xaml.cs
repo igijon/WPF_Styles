@@ -20,5 +20,15 @@ namespace EjemploEstilos
         {
             InitializeComponent();
         }
+
+        private void element_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ((TextBlock)sender).Background = new SolidColorBrush(Colors.LightGoldenrodYellow);
+        }
+
+        private void element_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ((TextBlock)sender).Background = null;
+        }
     }
 }
