@@ -46,11 +46,14 @@
         <Style x:Key="EmphasizedBigFontButtonStyle" BasedOn="{StaticResource BigFontButtonStyle}">
             <Setter Property="Control.Foreground" Value="Red"/>
         </Style>
+        <Style TargetType="Button">
+            <Setter Property="Control.Foreground" Value="Cyan"/>
+        </Style>
     </Window.Resources>
     <StackPanel>
         <StackPanel Margin="10">
             <TextBlock>Mi texto de pruebas</TextBlock>
-            <Button>Mi botón</Button>
+            <Button Style="{x:Null}">Mi botón</Button>
         </StackPanel>
         <StackPanel Margin="10">
             <TextBlock>Mi texto de prueba</TextBlock>
