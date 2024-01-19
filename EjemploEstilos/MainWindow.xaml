@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EjemploEstilos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="800"
+        Title="MainWindow" Height="750" Width="800"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         FontFamily="Verdana" FontSize="22" FontWeight="Bold">
     <Window.Resources>
@@ -43,6 +43,9 @@
             <EventSetter Event="TextBlock.MouseLeave" Handler="element_MouseLeave"/>
             <Setter Property="TextBlock.Padding" Value="5"/>
         </Style>
+        <Style x:Key="EmphasizedBigFontButtonStyle" BasedOn="{StaticResource BigFontButtonStyle}">
+            <Setter Property="Control.Foreground" Value="Red"/>
+        </Style>
     </Window.Resources>
     <StackPanel>
         <StackPanel Margin="10">
@@ -79,7 +82,9 @@
         </StackPanel>
         <StackPanel Margin="10">
             <TextBlock Style="{StaticResource MouseOverHighLightStyle}">Pasa el cursor sobre mí</TextBlock>
-            <Button Style="{StaticResource BigFontButtonStyle3}">Mi botón</Button>
+        </StackPanel>
+        <StackPanel Margin="10">
+            <TextBlock Style="{StaticResource EmphasizedBigFontButtonStyle}">Usando el estilo enfatizado</TextBlock>
         </StackPanel>
     </StackPanel>
 </Window>
